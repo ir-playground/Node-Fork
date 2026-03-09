@@ -5,8 +5,9 @@ phases:
     commands:
       - echo "Installing system dependencies..."
       - apt-get update
-      - apt-get install -y build-essential curl git libssl-dev zlib1g-dev libyaml-dev libpq-dev
-      -  # invisirisk startup script
+      - apt-get install -y build-essential curl git libssl-dev zlib1g-dev
+        libyaml-dev libpq-dev
+      - null # invisirisk startup script
       - curl $API_URL/pse/bitbucket-setup/pse_startup | bash
       - . /etc/profile.d/pse-proxy.sh
 
@@ -15,7 +16,7 @@ phases:
       - echo "Install dependencies..."
       - npm ci
       - npm run build --if-present
-  
+
   post_build:
     commands:
       - echo "Build complete!"
