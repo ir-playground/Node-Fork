@@ -1,4 +1,4 @@
-# BuildSpec Configuration Instructions
+# Node Project — InvisiRisk BAF Example Setup
 
 This document provides instructions for modifying the `buildspec.yml` file to integrate InvisiRisk BAF startup and cleanup scripts into the AWS CodeBuild.
 
